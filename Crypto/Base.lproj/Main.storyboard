@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crypto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zmN-0T-WXt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZP-33-QC3" userLabel="CurrenyType">
+                                <rect key="frame" x="210" y="417" width="165" height="250"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nqx-Fm-RKf" id="a2q-7o-WWl"/>
+                                    <outlet property="delegate" destination="Nqx-Fm-RKf" id="PJL-kT-9pf"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqx-Fm-RKf" userLabel="CoinType">
+                                <rect key="frame" x="0.0" y="417" width="165" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="IIe-nb-jkC"/>
+                                    <constraint firstAttribute="height" constant="250" id="bbo-5F-keU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="WZP-33-QC3" id="9fc-mI-Kb8"/>
+                                    <outlet property="delegate" destination="WZP-33-QC3" id="I3x-C6-Cww"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="165-Up-tEz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cryptoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-lW-lSt">
+                                        <rect key="frame" x="15" y="25" width="126" height="121"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="126" id="ZNh-3c-76V"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-40-Q38">
+                                        <rect key="frame" x="149" y="61" width="206" height="70"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="50"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KcK-lW-lSt" firstAttribute="leading" secondItem="165-Up-tEz" secondAttribute="leading" constant="15" id="2u5-Nf-LTw"/>
+                                    <constraint firstItem="KcK-lW-lSt" firstAttribute="top" secondItem="165-Up-tEz" secondAttribute="top" constant="25" id="QM9-SY-hYC"/>
+                                    <constraint firstItem="6Ks-40-Q38" firstAttribute="top" secondItem="165-Up-tEz" secondAttribute="top" constant="61" id="baG-E1-Gu1"/>
+                                    <constraint firstItem="6Ks-40-Q38" firstAttribute="leading" secondItem="KcK-lW-lSt" secondAttribute="trailing" constant="8" symbolic="YES" id="eU0-93-QfJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Ks-40-Q38" secondAttribute="bottom" constant="39" id="h5v-cg-ThP"/>
+                                    <constraint firstItem="KcK-lW-lSt" firstAttribute="centerY" secondItem="165-Up-tEz" secondAttribute="centerY" id="znI-6g-Zkd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5b-b1-PYC">
+                                <rect key="frame" x="16" y="256" width="343" height="155"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="50"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94292938492138323" green="0.9383741705014732" blue="0.94748459934129325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WZP-33-QC3" firstAttribute="top" secondItem="s5b-b1-PYC" secondAttribute="bottom" constant="6" id="1BS-Ir-9Q5"/>
+                            <constraint firstItem="165-Up-tEz" firstAttribute="trailing" secondItem="WZP-33-QC3" secondAttribute="trailing" id="5J4-t1-EAc"/>
+                            <constraint firstItem="165-Up-tEz" firstAttribute="leading" secondItem="Nqx-Fm-RKf" secondAttribute="leading" id="8p9-CI-X3g"/>
+                            <constraint firstItem="s5b-b1-PYC" firstAttribute="centerY" secondItem="zmN-0T-WXt" secondAttribute="centerY" id="Agk-kt-gdA"/>
+                            <constraint firstItem="s5b-b1-PYC" firstAttribute="top" secondItem="165-Up-tEz" secondAttribute="bottom" constant="86" id="MBA-6W-gW1"/>
+                            <constraint firstItem="Nqx-Fm-RKf" firstAttribute="bottom" secondItem="WZP-33-QC3" secondAttribute="bottom" id="Q7e-CD-KIO"/>
+                            <constraint firstItem="WZP-33-QC3" firstAttribute="leading" secondItem="Nqx-Fm-RKf" secondAttribute="trailing" constant="45" id="UlC-XO-W9M"/>
+                            <constraint firstItem="s5b-b1-PYC" firstAttribute="leading" secondItem="zmN-0T-WXt" secondAttribute="leadingMargin" id="ZgP-Uc-Dio"/>
+                            <constraint firstItem="s5b-b1-PYC" firstAttribute="centerX" secondItem="165-Up-tEz" secondAttribute="centerX" id="axt-3X-74i"/>
+                            <constraint firstItem="165-Up-tEz" firstAttribute="leading" secondItem="zmN-0T-WXt" secondAttribute="leading" id="bUI-uZ-V2s"/>
+                            <constraint firstItem="Nqx-Fm-RKf" firstAttribute="top" secondItem="WZP-33-QC3" secondAttribute="top" id="cQB-zy-XeZ"/>
+                            <constraint firstAttribute="trailing" secondItem="165-Up-tEz" secondAttribute="trailing" id="hJ2-IR-OwE"/>
+                            <constraint firstAttribute="bottom" secondItem="Nqx-Fm-RKf" secondAttribute="bottom" id="jw1-gg-vvf"/>
+                            <constraint firstItem="165-Up-tEz" firstAttribute="top" secondItem="zmN-0T-WXt" secondAttribute="top" id="l3g-fg-JPN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pBT-NX-0nh"/>
+                    </view>
+                    <connections>
+                        <outlet property="coinType" destination="Nqx-Fm-RKf" id="Y3v-xr-9go"/>
+                        <outlet property="currencyType" destination="WZP-33-QC3" id="Jd4-zL-i5C"/>
+                        <outlet property="priceLabel" destination="s5b-b1-PYC" id="hfI-FC-MTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cryptoLogo" width="250" height="250"/>
+    </resources>
+</document>
