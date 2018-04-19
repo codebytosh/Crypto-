@@ -14,15 +14,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    //TODO: API and Array Values
+    //TODO: API and Array Variables
     
     let baseURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms="
     var APIurl = ""
     var currencySymbol = ""
     var coinValue = ""
     var currencyValue = ""
-    
-    //let baseURL = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,XRP,BCH,ZEC,DASH,NEO,XLM&tsyms=AUD,BRL,CAD,CNY,EUR,GBP,HKD,IDR,ILS,INR,JPY,MXN,NOK,NZD,PLN,RON,RUB,SEK,SGD,USD,ZAR"
     
     let currencyArray : [String] = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR", "BTC", "ETH", "LTC", "XRP", "BCH", "ZEC", "DASH", "NEO", "XLM"]
     
@@ -117,7 +115,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         APIurl = baseURL + coinValue + "&tsyms=" + currencyValue
         print(APIurl)
         
-        currencySymbol = currencySymbols[row]
+        currencySymbol = currencySymbols[y]
         
         //Set up variables to fetch JSON Data
         let tryConversion = false;
@@ -164,6 +162,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             priceLabel.text = currencySymbol + " " + String(coinResult)
             
             print(coinResult)
+            
         } else {
             priceLabel.text = "Connection Issues"
         }
