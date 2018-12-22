@@ -20,7 +20,7 @@ Created using CryptoCompare API and REST alongside with thrid party libraries Sw
 
 # MVP 
 
-![](https://media.giphy.com/media/3mmdzYD4IS2WjkIhk4/giphy.gif)
+![](https://media.giphy.com/media/3qs0gH8nMccIhNX4xy/giphy.gif)
 
 
 
